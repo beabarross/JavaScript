@@ -16,3 +16,4 @@ function teste() {
     alert('Teste');
     //texto
 }
+
