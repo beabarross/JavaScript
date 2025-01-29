@@ -79,6 +79,7 @@ function calcular() {
     limpar();
 }
 
+<<<<<<< HEAD
 function calcularComSwitch() {
     valor1 = parseFloat(valor1);
     valor2 = parseFloat(valor2);
@@ -96,12 +97,25 @@ function calcularComSwitch() {
         case '/':
             resultado = valor1 / valor2
             break;
+=======
+
+//Exercício 1
+
+function identificarSono() {
+    const qtdHoras = prompt('Quantas horas você tem dormido por noite?');
+    if (qtdHoras < 8) {
+        alert('Você está dormindo pouco. Durma mais!');
+    } else {
+        alert('Você está dormindo o suficiente, continue assim!');
+>>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
     }
     alert('Resultado: ' +resultado);
     limpar();
 }
 
+//Exercício 2
 
+<<<<<<< HEAD
 //Exercício 1
 
 function identificarSono() {
@@ -115,6 +129,8 @@ function identificarSono() {
 
 //Exercício 2
 
+=======
+>>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
 /*function retornarHora(valorDaHora) {
     const = prompt('Que horas são?')
     if (valor da hora <= 12) {
@@ -185,6 +201,7 @@ function verificarEntradaMelhorada() {
     } else {
         alert('Entrada negada');
     }
+<<<<<<< HEAD
 }
 
 function verificarMeiaEntrada() {
@@ -379,3 +396,6 @@ function verificarCupomValido(valorCupomupom) {
 
 
 
+=======
+}
+>>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
