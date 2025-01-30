@@ -79,7 +79,7 @@ function calcular() {
     limpar();
 }
 
-<<<<<<< HEAD
+
 function calcularComSwitch() {
     valor1 = parseFloat(valor1);
     valor2 = parseFloat(valor2);
@@ -97,7 +97,7 @@ function calcularComSwitch() {
         case '/':
             resultado = valor1 / valor2
             break;
-=======
+     } }
 
 //Exercício 1
 
@@ -107,15 +107,14 @@ function identificarSono() {
         alert('Você está dormindo pouco. Durma mais!');
     } else {
         alert('Você está dormindo o suficiente, continue assim!');
->>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
-    }
+  }
     alert('Resultado: ' +resultado);
     limpar();
 }
 
 //Exercício 2
 
-<<<<<<< HEAD
+
 //Exercício 1
 
 function identificarSono() {
@@ -129,8 +128,6 @@ function identificarSono() {
 
 //Exercício 2
 
-=======
->>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
 /*function retornarHora(valorDaHora) {
     const = prompt('Que horas são?')
     if (valor da hora <= 12) {
@@ -201,7 +198,7 @@ function verificarEntradaMelhorada() {
     } else {
         alert('Entrada negada');
     }
-<<<<<<< HEAD
+
 }
 
 function verificarMeiaEntrada() {
@@ -335,20 +332,26 @@ function calcularFormaPagamento(preco) {
 }
     */
 
-function calcularValorTotal(){
-    const valorProduto = prompt('Informe o valor total dos produtos');
-    //calcular o valor da forma de pagamento
-    let total = calcularFormaPgto(valorProduto);
-    //calcular o valor do desconto (se houver)
-    total = calcularDesconto(valorProduto);
-    //calcular o valor do frete
-}
 
-function calcularFormaPgto(vlProduto) {
-    const formaPgto = parseInt(prompt('Informe a forma de pagamente /n1 - Cartão de débito/n2 - PIX/n3 - Cartão de Crédito/n4 - Boleto'));
-    const CARTAODEB = 1, PIX = 2, CARTAOCRED = 3, BOLETO = 4;
-    
-    /*
+
+function calcularValorTotal() {
+            const valorProduto = parseFloat(prompt('Informe o valor total dos produtos'));
+            //calcular o valor da forma de pagamento
+            let total = valorProduto + calcularFormaPgto(valorProduto);
+            console.log('Total com forma de pagamento: '+total);
+            //calcular o valor do desconto (se houver)
+            total -= calcularDesconto(valorProduto);
+            console.log('Total com cupom: '+total);
+            //calcular o valor do frete
+            total += calcularFrete();
+            alert('Total da compra: R$'+total);
+        }
+        
+        function calcularFormaPgto(vlProduto) {
+            const formaPgto = parseInt(prompt('Informe a forma de pagamento \n1 - Cartão de débito\n2 - Pix\n3 - Cartão de crédito\n4 - Boleto'));
+            const CARTAODEB = 1, PIX = 2, CARTAOCRED = 3, BOLETO = 4;
+
+                /*
     BOLETO = 4;
     if (formaPgto == CARTAODEB) {
         //5% OFF
@@ -361,41 +364,92 @@ function calcularFormaPgto(vlProduto) {
     }
         mas usa-se o switch */
 
-    switch (formaPgto) {
-        case CARTAODEB : 
-            //5% OFF
-            return vlProduto - (vlProduto * 0.05);
-            break;
-        case PIX: 
-            //10% OFF
-            return vlProduto - (vlProduto * 0.1);
-            break;
-        case CARTAOCRED:
-            //+ 2%
-            return vlProduto + (vlProduto * 0.02);
-            break;
-        case BOLETO:
-            //não adc nada
-            return vlProduto;
-    }
+            switch (formaPgto) {
+                case CARTAODEB:
+                    return -(vlProduto * 0.05);
+                case PIX:
+                    return -(vlProduto * 0.1);
+                case CARTAOCRED:
+                    return vlProduto * 0.02;
+                case BOLETO:
+                    return 0;
+            }
 }
-
+        
 function calcularDesconto(vlProduto) {
-    const cupom = prompt('Você possui algum cupom? Se sim, digite-o');
-    let valorCupom = cupom.substring(0,2);
-    if (verificarCupomValido(cupom)) {
-        //aplicar o desconto
-        return vlProduto - (vlProduto * (valorCupom / 100));
+            const cupom = prompt('Você possui algum cupom? Se sim, digite-o');
+            let valorCupom = cupom.substring(0,2);
+            if (verificarCupomValido(valorCupom)) {
+                //aplicar o desconto
+                return vlProduto * (valorCupom / 100);
+            }
+            return 0;
+}
+    
+function verificarCupomValido(valorCupom) {
+            return !isNaN(valorCupom);
+}
+        
+function calcularFrete() {
+            const tipoFrete = parseInt(prompt('Escolha o tipo de frete\n1 - Frete Padrão \n2 - Frete Expresso'));
+            const FRETEPADRAO = 1, FRETEEXPRESSO = 2;
+            switch (tipoFrete) {
+                case FRETEPADRAO:
+                    return 10;
+                case FRETEEXPRESSO:
+                    return 20;
+            }
+            return 0;
+}
+    
+function loopUmaDez() {
+    console.log('Loop com for:');
+    for (let i = 1; i <= 10; i++) {
+        console.log(i)
     }
-    return vlProduto;
+    console.log('Loop com while:');
+    let c = 1;
+    while (c <= 10) {
+        console.log(c);
+        c++;
+    }
 }
-
-function verificarCupomValido(valorCupomupom) {
-    return !isNaN(valorCupom);
+        
+function loopDezaUm() {
+    console.log('Loop com for:');
+    for (let i = 10; i > 0; i--) {
+        console.log(i)
+    }
+    console.log('Loop com while:');
+    let c = 10;
+    while (c > 0) {
+        console.log(c);
+        c--;
+    }
 }
-
-
-
-=======
+        
+function loopParesAteDez() {
+    console.log('Loop com for:');
+    for (let i = 0; i <= 10 ; i+=2) {
+        console.log(i)
+    }
+    console.log('Loop com while:');
+    let c = 0;
+    while (c <= 10) {
+        console.log(c);
+        c+=2;
+    }
 }
->>>>>>> 4be94c95b577e27159428e503c3262ce7813595c
+        
+function loopImparesAteDez() {
+    console.log('Loop com for:');
+        for (let i = 1; i <= 10 ; i+=2) {
+        console.log(i)
+            }
+    console.log('Loop com while:');
+        let c = 1;
+        while (c <= 10) {
+        console.log(c);
+        c+=2;
+            }
+}
