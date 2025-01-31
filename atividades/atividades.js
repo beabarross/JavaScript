@@ -453,3 +453,82 @@ function loopImparesAteDez() {
         c+=2;
             }
 }
+
+function whileBreakEContinue() {
+    let numero = 0;
+    while (numero != 7) {
+        numero = prompt('Informe um número');
+        if  (numero == 5) {
+            console.log('Achou um easter egg e pode sair do loop');
+            break;
+        } else if (numero == 3) {
+            console.log("Não imprime o número");
+            continue;
+        }
+        console.log(numero);
+    }
+}
+
+function pedirNota () {
+    let c;
+    while (true) {
+        c = prompt('Informe uma nota');
+        if (c >= 0 && c <= 10) {
+            alert('valor válido');
+            break;
+        } else  {
+            alert('Valor inválido')
+            continue;
+        }
+    }
+}
+
+//faça um programa que leia um nome de usuário e a sua senha. Repita a informação até que seja a senha configurada. Crie constantes para nome e senha.
+
+function lerUsuario () {
+    const usuarioCorreto = "beatriz";
+    const senhaCorreta = "vini";
+    let nome, senha;
+    while (true) {
+        nome = prompt('Informe seu usuário');
+        senha = prompt('Informe a sua senha');
+        if (nome === usuarioCorreto && senha === senhaCorreta) {
+            alert('usuário e senha válido');
+            break;
+        } else {
+            alert('usuário e senha inválidos, tente novamente')
+            continue;
+        }
+    }
+}
+
+
+/*Peça ao usuário para digitar palavras repetidamente.
+Ignore palavras que tenham menos de 3 caracteres usando continue (exiba no console qual palavra foi ignorada e o porquê).
+Pare o loop se a palavra for "sair".
+Caso contrário, exiba a palavra válida.*/
+
+function entradaPalavras() {
+    while (true) {
+        const palavra = prompt("Digite uma palavra (digite 'sair' para encerrar):");
+
+        // Verifica se a palavra tem menos de 3 caracteres
+        if (palavra.length < 3) {
+            console.log(`Palavra "${palavra}" ignorada: tem menos de 3 caracteres.`);
+            continue; // Ignora esta iteração do loop
+        }
+
+        // Verifica se a palavra é "sair" (encerra o loop)
+        if (palavra.toLowerCase() === "sair") {
+            console.log("Encerrando o programa...");
+            break; // Sai do loop
+        }
+
+        // Caso contrário, exibe a palavra válida
+        console.log(`Palavra válida: "${palavra}"`);
+    }
+}
+
+
+
+
