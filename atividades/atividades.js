@@ -529,6 +529,40 @@ function entradaPalavras() {
     }
 }
 
+// Faça um método que solicite 10 números ao usuário e os grave em um array.
 
+function adicionarNumero() {
+    let numeros = [];
+    for ( let i = 0; i < 10; i++){
+    let numero = Number(prompt('Digite um número para a array'));
+    numeros.push(numero);
+    console.log(numeros);
+    }
+}
 
+function realizarLoginUsuarios() {
+    const usuarios = ['tamires@@', 'marcos123', 'gabi77'];
+    const senhas = ['123', 'aab4', 'a57'];
+    let usuarioLogin = prompt('Informe seu usuário de login');
+    let senhaLogin = prompt('Informe sua senha');
+    let fezLogin = false;
+    for (let i = 0; i < usuarios.length; i++) {
+        if (usuarios[i] == usuarioLogin && senhas[i] == senhaLogin) {
+            fezLogin = true;
+            alert('Login realizado');
+            break;
+        }
+    }
+    if (!fezLogin) {
+        alert('Usuário ou senha inválido. Tente novamente');
+    }
+}
 
+function contarLetras() {
+    const palavras = ['cachorro', 'gato', 'elefante'];
+
+    palavras.forEach(palavra => {
+        console.log('A palavra ' + palavra + ' tem ' + palavra.length + ' letras');
+        alert ('A palavra ' + palavra + ' tem ' + palavra.length + ' letras')
+})
+}
