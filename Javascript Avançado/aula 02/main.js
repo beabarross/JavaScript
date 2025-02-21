@@ -32,6 +32,23 @@ document.addEventListener('keypress', (e) => {
     }
 })
 
+document.addEventListener('keydown', (e) => {
+    if(e.key == "space") {
+        document.querySelector(".quadrado").classList.toggle("slide-rotate-hor-top")
+    }
+})
 
+document.addEventListener('keypress', (e) => {
+    if (e.key == 'w') {
+        document.querySelector('.quadrado2').classList.toggle("wobble-hor-top")
 
+    }
+})
+
+document.addEventListener("keydown", (e)=>{
+    console.log(e.key)
+    if(e.key == "Escape"){
+        document.querySelector(".bola").classList.toggle("slide-out-blurred-right")
+    }
+})
 

@@ -12,6 +12,7 @@ html {
     background-color: rgb(142, 94, 186);
   
 }
+
 .slide-rotate-hor-top {
 	animation: slide-rotate-hor-top 0.5s forwards cubic-bezier(0.250, 0.460, 0.450, 0.940)   ;
 }
@@ -52,3 +53,41 @@ html {
     }
   }
   
+  .quadrado2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(81, 192, 159);
+  
+  }
+
+  .wobble-hor-top {
+    animation: wobble-hor-top 0.8s both;
+  }
+
+/**
+ * ----------------------------------------
+ * animation wobble-hor-top
+ * ----------------------------------------
+ */
+@keyframes wobble-hor-top {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-30px) rotate(6deg);
+  }
+  30% {
+    transform: translateX(15px) rotate(-6deg);
+  }
+  45% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+  60% {
+    transform: translateX(9px) rotate(-2.4deg);
+  }
+  75% {
+    transform: translateX(-6px) rotate(1.2deg);
+  }
+}
