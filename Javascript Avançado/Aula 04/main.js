@@ -1,7 +1,7 @@
 //Parte 01: HTML E JS
 //1. Alterar o texto de um H1 para “ola mundo”
 let titulo = document.querySelector('.titulo');
-titulo.innerHTML = 'Olá mundo!';
+titulo.innerText = 'Olá mundo!';
 
 //2. Trocar a cor de fundo de uma lista 2 itens
 let lista = document.querySelector('.itens');

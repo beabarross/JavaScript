@@ -1,0 +1,93 @@
+html{
+    background-image: url(imagens/fundo.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+.titulo h1{
+    text-align: center;
+    font-family: "Ketchum";
+    letter-spacing: 10px;
+    font-size: 70px;
+    background: -webkit-linear-gradient(#9f0aef, #0d74c9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.lista-winx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lista-winx .winx{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: transparent;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 0px 40px 40px 40px;
+    border-radius: 10px;
+    margin-top: 40px;
+    transform: 1s;
+    width: 250px;
+    height: 450px;
+    transition: 0.3s;
+    margin-bottom: 50px;
+}
+.winx:hover{
+    transform: scale(1.2);
+    
+}
+.lista-winx .winx .nome{
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: "Rubik", sans-serif;
+    font-size: 25px;
+    color: rgb(196, 95, 187);
+}
+.lista-winx .winx .poder {
+    letter-spacing: 2px;
+    opacity: 0.8;
+    font-weight:500;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    border-radius: 30px;
+}
+.lista-winx .winx img{
+    height: 450px;
+
+}
+.fogo{
+    background-color: rgba(255, 166, 0, 0.671);
+    color: white;
+}
+.luz{
+    background-color: rgba(0, 255, 255, 0.438);
+    color: white;
+}
+.natureza{
+    background-color: rgba(236, 112, 215, 0.521);
+    color: white;
+}
+.musica{
+    background-color: rgba(137, 43, 226, 0.521);
+    color: white;
+}
+.tecnologia{ 
+    background-color: rgba(255, 192, 203, 0.555);
+    color: white;
+}
+.ondas{
+    background-color: rgba(0, 128, 0, 0.5);
+    color: white;
+}
